@@ -2,9 +2,13 @@ const idUser = document.getElementsByClassName('idUser')
 
 
     // let idUser=''
-    let mainDiv = document.createElement("div");
+    let mainDiv = document.getElementsByClassName('anime')[0]
+
     
+    console.log("mainDiv", mainDiv)
     function getidUser() {
+        mainDiv.style.display = "none"
+        
         mainDiv.innerHTML = ''
         const idUser = document.getElementsByClassName('idUser')[0].value;
         // console.log(idUser)
@@ -26,8 +30,10 @@ const idUser = document.getElementsByClassName('idUser')
                     mainDiv.appendChild(paraEmail)
                     mainDiv.appendChild(paraName)
                     mainDiv.appendChild(phone)
+                    mainDiv.style.display = "block"
+                    mainDiv.style.animation = 'Anime 5s forwards'
     
-                    document.body.appendChild(mainDiv)
+                    // document.body.appendChild(mainDiv)
     
                 })
     
